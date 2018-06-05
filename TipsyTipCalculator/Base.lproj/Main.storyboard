@@ -43,6 +43,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="billAmountChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="AzV-5G-TKh"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-3P-gfS">
                                 <rect key="frame" x="15" y="180" width="345" height="190"/>
@@ -59,8 +62,11 @@
                                                 <color key="textColor" red="0.12156862745098039" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sl6-HC-UOT">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.14999999999999999" minValue="0.10000000000000001" maxValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Sl6-HC-UOT">
                                                 <rect key="frame" x="84" y="0.0" width="263" height="31"/>
+                                                <connections>
+                                                    <action selector="tipPercentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GL1-9g-xcy"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -177,6 +183,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="enterBillTF" destination="Ti2-BR-9BX" id="80f-es-arX"/>
+                        <outlet property="tipAmountLbl" destination="Uo9-q0-Zfp" id="ar6-CL-Oce"/>
+                        <outlet property="tipPercentLbl" destination="azM-tJ-Ak7" id="brC-Hr-d4e"/>
+                        <outlet property="tipPercentSlider" destination="Sl6-HC-UOT" id="yQZ-n4-7nu"/>
+                        <outlet property="totalAmountLbl" destination="5eL-Ow-2w4" id="JiG-fb-viA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
