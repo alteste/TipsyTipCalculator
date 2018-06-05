@@ -1,0 +1,2 @@
+# TipsyTipCalculator
+Bill splitting app
