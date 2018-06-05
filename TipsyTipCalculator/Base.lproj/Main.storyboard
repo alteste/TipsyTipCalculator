@@ -134,8 +134,11 @@
                                                 <color key="textColor" red="0.12156862745098039" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7tI-Pn-pVS">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="7tI-Pn-pVS">
                                                 <rect key="frame" x="84" y="0.0" width="263" height="31"/>
+                                                <connections>
+                                                    <action selector="splitNumberChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="eq5-lj-Oos"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -185,6 +188,9 @@
                     </view>
                     <connections>
                         <outlet property="enterBillTF" destination="Ti2-BR-9BX" id="80f-es-arX"/>
+                        <outlet property="splitAmountLbl" destination="Ho4-VM-ogc" id="xaL-QK-VFT"/>
+                        <outlet property="splitNumberLbl" destination="9fS-pq-Ssh" id="tT2-cf-oPh"/>
+                        <outlet property="splitNumberSlider" destination="7tI-Pn-pVS" id="mM3-Oa-p2K"/>
                         <outlet property="tipAmountLbl" destination="Uo9-q0-Zfp" id="ar6-CL-Oce"/>
                         <outlet property="tipPercentLbl" destination="azM-tJ-Ak7" id="brC-Hr-d4e"/>
                         <outlet property="tipPercentSlider" destination="Sl6-HC-UOT" id="yQZ-n4-7nu"/>

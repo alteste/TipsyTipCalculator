@@ -16,12 +16,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLbl: UILabel!
     @IBOutlet weak var totalAmountLbl: UILabel!
     
-    var tipCalcBrains = TipCalcBrains(billAmount: 25.00, tipPercent: 0.15)
+    @IBOutlet weak var splitNumberLbl: UILabel!
+    @IBOutlet weak var splitNumberSlider: UISlider!
+    @IBOutlet weak var splitAmountLbl: UILabel!
+    
+    var tipCalcBrains = TipCalcBrains(billAmount: 25.00, tipPercent: 0.15, splitNumber: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tipPercentValue()
+        splitNumberValue()
     }
 
     @IBAction func billAmountChange(_ sender: Any) {
@@ -37,6 +42,7 @@ class ViewController: UIViewController {
         tipCalcBrains.tipPercent = Double(tipPercentSlider.value)
         tipCalcBrains.billAmount = ((enterBillTF.text)! as NSString).doubleValue
         tipCalcBrains.calculateTip()
+        calculateSplit()
         updateBillUI()
     }
     
@@ -47,6 +53,25 @@ class ViewController: UIViewController {
     
     func tipPercentValue() {
         tipPercentLbl.text = "Tip: \(Int(tipPercentSlider.value * 100))%"
+    }
+    
+    @IBAction func splitNumberChange(_ sender: Any) {
+        splitNumberValue()
+        calculateSplit()
+    }
+    
+    func calculateSplit() {
+        tipCalcBrains.splitNumber = Int(splitNumberSlider.value)
+        tipCalcBrains.calculateSplit()
+        updateSplitUI()
+    }
+    
+    func updateSplitUI() {
+        splitAmountLbl.text = String(format: "$%0.2f", tipCalcBrains.splitAmount)
+    }
+    
+    func splitNumberValue() {
+        splitNumberLbl.text = "Split: \(Int(splitNumberSlider.value))"
     }
     
 }
