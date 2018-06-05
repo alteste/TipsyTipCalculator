@@ -13,6 +13,7 @@
 		1A4884C920C68DA600B42A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4884C820C68DA600B42A09 /* Assets.xcassets */; };
 		1A4884CC20C68DA600B42A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4884CA20C68DA600B42A09 /* LaunchScreen.storyboard */; };
 		1A4884D720C68DA600B42A09 /* TipsyTipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4884D620C68DA600B42A09 /* TipsyTipCalculatorTests.swift */; };
+		1A4884E420C7396F00B42A09 /* TipCalcBrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4884E320C7396F00B42A09 /* TipCalcBrains.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1A4884D220C68DA600B42A09 /* TipsyTipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsyTipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4884D620C68DA600B42A09 /* TipsyTipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyTipCalculatorTests.swift; sourceTree = "<group>"; };
 		1A4884D820C68DA600B42A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A4884E320C7396F00B42A09 /* TipCalcBrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcBrains.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 		1A4884C020C68DA500B42A09 /* TipsyTipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				1A4884E220C7394C00B42A09 /* Controller */,
+				1A4884E120C7392D00B42A09 /* Model */,
 				1A4884C120C68DA500B42A09 /* AppDelegate.swift */,
 				1A4884C320C68DA500B42A09 /* ViewController.swift */,
 				1A4884C520C68DA500B42A09 /* Main.storyboard */,
@@ -94,6 +98,21 @@
 				1A4884D820C68DA600B42A09 /* Info.plist */,
 			);
 			path = TipsyTipCalculatorTests;
+			sourceTree = "<group>";
+		};
+		1A4884E120C7392D00B42A09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A4884E320C7396F00B42A09 /* TipCalcBrains.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A4884E220C7394C00B42A09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 			files = (
 				1A4884C420C68DA500B42A09 /* ViewController.swift in Sources */,
 				1A4884C220C68DA500B42A09 /* AppDelegate.swift in Sources */,
+				1A4884E420C7396F00B42A09 /* TipCalcBrains.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
