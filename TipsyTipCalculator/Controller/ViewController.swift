@@ -20,14 +20,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tipPercentValue()
     }
 
     @IBAction func billAmountChange(_ sender: Any) {
-        print("bill has changed")
+        calculateTip()
     }
     
     @IBAction func tipPercentChange(_ sender: Any) {
-        print("tip has changed")
+        tipPercentValue()
+        calculateTip()
+    }
+    
+    func calculateTip() {
+        tipCalcBrains.tipPercent = Double(tipPercentSlider.value)
+        tipCalcBrains.billAmount = ((enterBillTF.text)! as NSString).doubleValue
+        tipCalcBrains.calculateTip()
+        updateBillUI()
+    }
+    
+    func updateBillUI() {
+        totalAmountLbl.text = String(format: "$%0.2f", tipCalcBrains.totalAmount)
+        tipAmountLbl.text = String(format: "$%0.2f", tipCalcBrains.tipAmount)
+    }
+    
+    func tipPercentValue() {
+        tipPercentLbl.text = "Tip: \(Int(tipPercentSlider.value * 100))%"
     }
     
 }
