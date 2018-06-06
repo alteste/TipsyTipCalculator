@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         tipPercentValue()
         splitNumberValue()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     @IBAction func billAmountChange(_ sender: Any) {
         calculateTip()
